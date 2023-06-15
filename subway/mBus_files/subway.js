@@ -667,7 +667,7 @@ function makeSearchResultLine(subwayId) {
 	}
 
 	jQuery.ajax( {
-		type : 'POST',
+		type: 'GET',
 		dataType : 'json',
 		url: 'https://crossorigin.me/http://m.bus.go.kr/mBus/subway/getStatnByRoute.bms',
 		data : req,
@@ -1232,7 +1232,7 @@ function makeSearchResult(statnNm) {
 	};
 	jQuery
 			.ajax( {
-				type : 'POST',
+				type : 'GET',
 				dataType : 'json',
 				url: 'https://crossorigin.me/http://m.bus.go.kr/mBus/subway/getStatnByNm.bms',
 				data : req,
