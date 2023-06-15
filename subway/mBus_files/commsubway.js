@@ -357,9 +357,9 @@ function makeArvlSubway(subwayId, statnId, statnNm, headerType, tabType) {
 	};
 	jQuery
 			.ajax( {
-				type: 'GET',
+				type: 'POST',
 				dataType : 'json',
-				url: 'https://crossorigin.me/http://m.bus.go.kr/mBus/subway/getArvlByInfo.bms',
+				url: 'https://script.google.com/macros/s/AKfycbxWJbEBAv-jgNvvO3IhiuBicUDjb0gv8ATEybupxFE/dev/http://m.bus.go.kr/mBus/subway/getArvlByInfo.bms',
 
 				data : req,
 				success : function(data) {
