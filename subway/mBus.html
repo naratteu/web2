@@ -41,6 +41,16 @@
 	<script type="text/javascript" src="./mBus_files/commsubway.js?data=20190402" charset="UTF-8"></script>
 	
 	<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=723e7cf467c5f8f87b4cdd4fa1edd57b"></script><script charset="UTF-8" src="http://t1.daumcdn.net/mapjsapi/js/main/4.4.8/kakao.js"></script>
+
+	<script type="text/javascript">
+        $(document).ready(function () {
+            const params = new URLSearchParams(window.location.search);
+            if (params.has("statnNm")) {
+                document.querySelector("#search").value = params.get('statnNm');
+                document.querySelector("#searchIcon").click();
+            }
+        });
+	</script>
 	</head>
 	<body>
 	<div id="page">
