@@ -356,11 +356,11 @@ function makeArvlSubway(subwayId, statnId, statnNm, headerType, tabType) {
 		"statnId" : statnId
 	};
 	jQuery
-			.ajax( {
-				type: 'POST',
-				dataType : 'json',
-				url: 'https://script.google.com/macros/s/AKfycbxWJbEBAv-jgNvvO3IhiuBicUDjb0gv8ATEybupxFE/dev/http://m.bus.go.kr/mBus/subway/getArvlByInfo.bms',
-
+	.ajax( {
+		type: 'GET',
+		dataType : 'json',
+		url: 'http://naratteu.ivyro.net/getArvlByInfo.bms',
+		
 				data : req,
 				success : function(data) {
 					if (data.error.errorCode == '0000') {

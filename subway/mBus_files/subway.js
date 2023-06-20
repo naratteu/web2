@@ -667,9 +667,9 @@ function makeSearchResultLine(subwayId) {
 	}
 
 	jQuery.ajax( {
-		type: 'POST',
+		type: 'GET',
 		dataType : 'json',
-		url: 'https://script.google.com/macros/s/AKfycbxWJbEBAv-jgNvvO3IhiuBicUDjb0gv8ATEybupxFE/dev/http://m.bus.go.kr/mBus/subway/getStatnByRoute.bms',
+		url: 'http://naratteu.ivyro.net/getStatnByRoute.bms',
 		data : req,
 		success : function(data) {
 			if (data.error.errorCode == '0000') {
@@ -1231,10 +1231,10 @@ function makeSearchResult(statnNm) {
 		"statnNm" : statnNm
 	};
 	jQuery
-			.ajax( {
-				type: 'POST',
-				dataType : 'json',
-				url: 'https://script.google.com/macros/s/AKfycbxWJbEBAv-jgNvvO3IhiuBicUDjb0gv8ATEybupxFE/dev/http://m.bus.go.kr/mBus/subway/getStatnByNm.bms',
+	.ajax( {
+		type: 'GET',
+		dataType : 'json',
+		url: 'http://naratteu.ivyro.net/getStatnByNm.bms',
 				data : req,
 				success : function(data) {
 					if (data.error.errorCode == '0000') {
